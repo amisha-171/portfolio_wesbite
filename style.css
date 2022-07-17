@@ -1,9 +1,9 @@
 body {
-  background-image: url(/images/background.png);
-  background-size: cover;
+  background-color: #313456;
 }
+
 .words {
-  background-color: rgb(193, 180, 114);
+  background-color: #ddc586;
   border-radius: 50px;
   font-family: Poppins, Helvetica, sans-serif;
   font-weight: bold;
@@ -12,12 +12,13 @@ body {
   padding: 5px;
   margin-top: 3px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: opacity 0.3s ease;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
 }
 
 .words:hover {
-  background-color: rgba(255, 182, 193, 0.5);
+  background-color: #d1b28d;
+  opacity: 90%;
 }
 
 .container {
