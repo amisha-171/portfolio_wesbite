@@ -123,16 +123,6 @@ button:hover {
   background-color: rgba(0, 0, 0, 0.15);
 }
 
-.social-icons {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.social-icon-link {
-  margin: 8px;
-}
-
 .footer-logo {
   height: 80px;
 }
@@ -141,6 +131,50 @@ button:hover {
   margin-bottom: 10px;
 }
 
-.footer-container p {
-  margin-top: 10px;
+.website-rights {
+  margin-top: 15px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-icon-link {
+  margin: 8px;
+}
+
+.linkedin,
+.email,
+.github,
+.resume {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.tooltip {
+  position: absolute;
+  bottom: -10px;
+  background-color: #6361a3;
+  color: white;
+  border-radius: 2px;
+  font-size: 10px;
+  padding: 2px;
+  pointer-events: none;
+  white-space: nowrap;
+  opacity: 0;
+}
+
+.linkedin:hover .tooltip,
+.email:hover .tooltip,
+.github:hover .tooltip,
+.resume:hover .tooltip {
+  opacity: 1;
+  transition: opacity 0.5s;
 }
