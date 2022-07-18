@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   font-family: Poppins, Helvetica, sans-serif;
+  color: white;
 }
 
 #particles-js {
@@ -25,7 +26,7 @@ button {
   color: white;
   border-radius: 35px;
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 600;
   border: none;
   padding: 10px;
   transition: background-color 0.2s ease;
@@ -48,6 +49,7 @@ button:hover {
   z-index: 100;
   position: fixed;
   z-index: 100;
+  background: #313456;
 }
 
 .left-section {
@@ -58,7 +60,7 @@ button:hover {
 
 #logo {
   width: 100px;
-  margin-top: 20px;
+  margin-top: 10px;
   margin-right: 100px;
   margin-left: 20px;
 }
@@ -74,4 +76,42 @@ button:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.nav-link a {
+  text-decoration: none;
+  color: white;
+}
+
+#about {
+  position: relative;
+  top: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.pic-me {
+  height: 250px;
+  border-radius: 125px;
+  margin: 10px;
+}
+
+.about-left {
+  margin-right: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-left p {
+  text-align: center;
+  color: #beb9ac;
+}
+
+.about-right p {
+  color: #beb9ac;
 }

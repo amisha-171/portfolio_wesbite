@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio - Amisha Singh</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,17 +19,46 @@
     <div id="particles-js"></div>
     <header id="nav">
       <div class="left-section">
-        <img id="logo" src="/images/iconhighresgif.gif" />
+        <a href="#about"><img id="logo" src="/images/iconhighresgif.gif" /></a>
       </div>
       <div class="right-section">
         <ul class="nav-list">
-          <li class="nav-link"><button>About</button></li>
-          <li class="nav-link"><button>Projects</button></li>
-          <li class="nav-link"><button>Contact</button></li>
-          <li class="nav-link"><button>Surprise!</button></li>
+          <li class="nav-link">
+            <button><a href="#about">About</a></button>
+          </li>
+          <li class="nav-link">
+            <button><a href="#skills">Skills</a></button>
+          </li>
+          <li class="nav-link">
+            <button><a href="#projects">Projects</a></button>
+          </li>
+          <li class="nav-link">
+            <button><a href="#contact">Contact</a></button>
+          </li>
         </ul>
       </div>
     </header>
+
+    <div class="about-page" id="about">
+      <div class="about-left">
+        <h1>Hi, I'm Amisha!</h1>
+        <div><img class="pic-me" src="images/me.jpg" /></div>
+        <p>2nd Year Software Engineering Student University of Auckland</p>
+      </div>
+      <div class="about-right">
+        <h2>ABOUT ME</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
+          adipisci minus ipsa eius molestiae dignissimos accusamus quaerat
+          dolorem, soluta esse modi officiis, veniam quia voluptates sunt
+          aperiam dolorum recusandae facere excepturi fuga voluptatum! Tenetur
+          expedita quaerat maxime pariatur, blanditiis quae! Ducimus expedita
+          temporibus quam non quod! Animi voluptas architecto aliquam, non ea
+          accusantium, minus velit incidunt saepe, reiciendis nihil ipsum modi
+          provident.
+        </p>
+      </div>
+    </div>
 
     <script>
       particlesJS.load("particles-js", "particles.json", function () {
