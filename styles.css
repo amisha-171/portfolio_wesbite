@@ -101,7 +101,7 @@ body {
 .pic-me {
   height: 250px;
   border-radius: 125px;
-  margin: 10px;
+  margin: 30px auto;
 }
 
 .about-left {
@@ -117,12 +117,9 @@ body {
   color: #beb9ac;
 }
 
-.about-right p {
-  color: #beb9ac;
-}
-
 .projects-right p,
-.skills-right p {
+.skills-right p,
+.about-right p {
   color: #beb9ac;
   margin-top: 30px;
 }
