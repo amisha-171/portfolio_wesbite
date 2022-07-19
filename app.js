@@ -6,35 +6,41 @@ const highlightMenu = () => {
   const projects = document.querySelector("#projects-page");
   const contact = document.querySelector("#contact-page");
   let scrollPos = window.scrollY;
-  console.log(scrollPos);
+  console.log(window.innerWidth);
+
   // now add 'highlight' class to my menu items...
 
-  // checking if it's desktop display for highlights as we don't want it on mobile.
-  // window.innerWidth > 960 &&  ADD INTO ALL IF STATEMENTS
+  // checking if it's desktop display for highlights.
 
-  if (scrollPos < 600) {
+  if (window.innerWidth > 960 && scrollPos < 600) {
     about.classList.add("highlight");
     skills.classList.remove("highlight");
+    contact.classList.remove("highlight");
+    projects.classList.remove("highlight");
     return;
-  } else if (scrollPos < 1300) {
+  } else if (window.innerWidth > 960 && scrollPos < 1300) {
     skills.classList.add("highlight");
     about.classList.remove("highlight");
     projects.classList.remove("highlight");
+    contact.classList.remove("highlight");
     return;
-  } else if (scrollPos < 1500) {
+  } else if (window.innerWidth > 960 && scrollPos < 1600) {
     projects.classList.add("highlight");
     skills.classList.remove("highlight");
     contact.classList.remove("highlight");
+    about.classList.remove("highlight");
     return;
-  } else if (scrollPos < 2000) {
-    projects.classList.remove("highlight");
+  } else if (window.innerWidth > 960 && scrollPos < 2300) {
     contact.classList.add("highlight");
+    projects.classList.remove("highlight");
+    about.classList.remove("highlight");
+    skills.classList.remove("highlight");
     return;
   }
 
-  // if ((element && window.innerWidth < 960 && scrollPos < 600) || element) {
-  //   element.classList.remove("highlight");
-  // }
+  if (element && window.innerWidth < 960) {
+    element.classList.remove("highlight");
+  }
 };
 
 window.addEventListener("scroll", highlightMenu);

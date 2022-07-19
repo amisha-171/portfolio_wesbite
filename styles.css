@@ -59,10 +59,14 @@ body {
   align-items: center;
 }
 
+.left-section h1 {
+  white-space: nowrap;
+}
+
 #logo {
   width: 75px;
   margin-top: 10px;
-  margin-right: 100px;
+  margin-right: 30px;
   margin-left: 20px;
 }
 
