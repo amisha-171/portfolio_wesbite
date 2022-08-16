@@ -6,6 +6,32 @@
   scroll-behavior: smooth;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* handle */
+::-webkit-scrollbar-thumb {
+  background: #beb9ac;
+  border-radius: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #ddc586;
+  transition: all 0.25s ease-in;
+}
+
+a:hover {
+  color: #beb9ac;
+}
+
 #particles-js {
   position: fixed;
   width: 100%;
@@ -121,8 +147,33 @@ body {
 .skills-right p,
 .about-right p {
   color: #beb9ac;
-  margin-top: 30px;
+  margin-top: 20px;
+  margin-bottom: 40px;
 }
+
+.projects-right h2,
+.skills-right h2,
+.about-right h2 {
+  margin-bottom: 20px;
+}
+
+.projects-right h3 {
+  color: #ddc586;
+  margin-top: 5px;
+}
+
+.projects-right h4 {
+  color: #fff;
+  margin-top: 5px;
+}
+
+.projects-right {
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  overflow-y: scroll;
+}
+
 .footer-container {
   display: flex;
   margin-top: 30px;
