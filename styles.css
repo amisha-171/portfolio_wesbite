@@ -6,9 +6,13 @@
   scroll-behavior: smooth;
 }
 
+.disappear {
+  display: none;
+}
+
 /* width */
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 0.3vw;
 }
 
 /* track */
@@ -76,11 +80,11 @@ body {
   right: 0px;
   z-index: 100;
   background: #313456;
-  height: 90px;
+  height: 10vh;
 }
 
 .left-section {
-  width: 150px;
+  width: 10vw;
   display: flex;
   align-items: center;
 }
@@ -90,7 +94,7 @@ body {
 }
 
 #logo {
-  width: 75px;
+  width: 60px;
   margin-top: 10px;
   margin-right: 30px;
   margin-left: 20px;
@@ -125,8 +129,8 @@ body {
 }
 
 .pic-me {
-  height: 250px;
-  border-radius: 125px;
+  height: 25vh;
+  border-radius: 12.5vh;
   margin: 30px auto;
 }
 
@@ -138,9 +142,27 @@ body {
   align-items: center;
 }
 
+.other-left {
+  margin-right: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .about-left p {
   text-align: center;
-  color: #beb9ac;
+  color: #fff;
+}
+
+.about-left h3 {
+  text-transform: none;
+}
+
+.projects-left,
+.skills-left,
+.about-left {
+  height: 35vh;
+  width: 30vw;
 }
 
 .projects-right p,
@@ -167,10 +189,10 @@ body {
   margin-top: 5px;
 }
 
-.projects-right {
+.projects-right-box {
   display: flex;
   flex-direction: column;
-  height: 50vh;
+  height: 35vh;
   overflow-y: scroll;
 }
 
