@@ -7,6 +7,8 @@ const highlightMenu = () => {
   const contact = document.querySelector("#contact-page");
   let scrollPos = window.scrollY;
 
+  console.log(scrollPos);
+
   // now add 'highlight' class to my menu items...
   // checking if it's desktop display for highlights.
 
@@ -24,14 +26,14 @@ const highlightMenu = () => {
     contact.classList.remove("highlight");
     document.getElementById("page-title").classList.remove("disappear");
     return;
-  } else if (window.innerWidth > 960 && scrollPos < 1410) {
+  } else if (window.innerWidth > 960 && scrollPos < 1550) {
     projects.classList.add("highlight");
     skills.classList.remove("highlight");
     contact.classList.remove("highlight");
     about.classList.remove("highlight");
     document.getElementById("page-title").classList.remove("disappear");
     return;
-  } else if (window.innerWidth > 960 && scrollPos < 2300) {
+  } else if (window.innerWidth > 960 && scrollPos < 2200) {
     contact.classList.add("highlight");
     projects.classList.remove("highlight");
     about.classList.remove("highlight");
@@ -40,7 +42,8 @@ const highlightMenu = () => {
     return;
   }
 
-  if (window.innerWidth < 960) {
+  if (window.innerWidth < 960 && element != null) {
+    //removing highlight if there is actually an element highlighted.
     element.classList.remove("highlight");
     document.getElementById("page-title").classList.add("disappear");
   }
