@@ -20,6 +20,7 @@ const highlightMenu = () => {
     contactButton.classList.remove("highlight");
     projectsButton.classList.remove("highlight");
     document.getElementById("page-title").classList.add("disappear");
+    document.getElementById("logo").classList.add("disappear");
     return;
   } else if (isInViewport(about)) {
     aboutButton.classList.add("highlight");
@@ -27,6 +28,7 @@ const highlightMenu = () => {
     contactButton.classList.remove("highlight");
     projectsButton.classList.remove("highlight");
     document.getElementById("page-title").classList.remove("disappear");
+    document.getElementById("logo").classList.remove("disappear");
     return;
   } else if (isInViewport(skills)) {
     skillsButton.classList.add("highlight");
@@ -34,6 +36,7 @@ const highlightMenu = () => {
     projectsButton.classList.remove("highlight");
     contactButton.classList.remove("highlight");
     document.getElementById("page-title").classList.remove("disappear");
+    document.getElementById("logo").classList.remove("disappear");
     return;
   } else if (isInViewport(projects)) {
     projectsButton.classList.add("highlight");
@@ -41,6 +44,7 @@ const highlightMenu = () => {
     contactButton.classList.remove("highlight");
     aboutButton.classList.remove("highlight");
     document.getElementById("page-title").classList.remove("disappear");
+    document.getElementById("logo").classList.remove("disappear");
     return;
   } else if (isInViewport(contact)) {
     contactButton.classList.add("highlight");
@@ -48,6 +52,8 @@ const highlightMenu = () => {
     aboutButton.classList.remove("highlight");
     skillsButton.classList.remove("highlight");
     document.getElementById("page-title").classList.remove("disappear");
+    document.getElementById("logo").classList.remove("disappear");
+
     return;
   }
 };
