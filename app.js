@@ -15,14 +15,16 @@ const highlightMenu = () => {
   // checking if it's desktop display for highlights.
 
   if (window.innerWidth < 960) {
+    document.getElementById("page-title").classList.add("disappear");
+    document.getElementById("logo").classList.add("disappear");
     aboutButton.classList.remove("highlight");
     skillsButton.classList.remove("highlight");
     contactButton.classList.remove("highlight");
     projectsButton.classList.remove("highlight");
-    document.getElementById("page-title").classList.add("disappear");
-    document.getElementById("logo").classList.add("disappear");
     return;
-  } else if (isInViewport(about)) {
+  }
+
+  if (isInViewport(about)) {
     aboutButton.classList.add("highlight");
     skillsButton.classList.remove("highlight");
     contactButton.classList.remove("highlight");
@@ -53,14 +55,14 @@ const highlightMenu = () => {
     skillsButton.classList.remove("highlight");
     document.getElementById("page-title").classList.remove("disappear");
     document.getElementById("logo").classList.remove("disappear");
-
     return;
   }
 };
+
+window.addEventListener("load", highlightMenu);
 window.addEventListener("scroll", highlightMenu);
 window.addEventListener("resize", highlightMenu);
 window.addEventListener("click", highlightMenu);
-window.addEventListener("load", highlightMenu);
 
 function isInViewport(element) {
   const rect = element.getBoundingClientRect();

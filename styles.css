@@ -82,13 +82,13 @@ body {
   height: 10vh;
 }
 
-.left-section {
+#left-section {
   width: 10vw;
   display: flex;
   align-items: center;
 }
 
-.left-section h1 {
+#left-section h1 {
   white-space: nowrap;
 }
 
@@ -159,6 +159,10 @@ body {
     height: 50%;
     border-radius: 30px;
     background-color: rgba(0, 0, 0, 0.15);
+  }
+
+  .btn:hover {
+    background-color: #6361a3;
   }
 
   #nav {
