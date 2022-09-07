@@ -72,14 +72,13 @@ body {
 
 #nav {
   display: flex;
-  flex-direction: row;
+  position: sticky;
   justify-content: space-between;
-  position: fixed;
   top: 0px;
   left: 0px;
   right: 0px;
   z-index: 100;
-  background: #313456;
+  background: rgba(49, 52, 86, 0.5);
   height: 10vh;
 }
 
@@ -101,7 +100,6 @@ body {
 }
 
 .right-section {
-  margin-right: 20px;
   display: flex;
   align-items: center;
 }
@@ -118,24 +116,32 @@ body {
   color: white;
 }
 
+#page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .sub-page {
   position: relative;
-  margin-top: 30px;
+  margin-top: 5vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 200px 50px;
+  padding: 7vh 5vw;
+  width: 50%;
+  height: 50%;
+  border-radius: 30px;
   background-color: rgba(0, 0, 0, 0.15);
 }
 
 .pic-me {
   height: 25vh;
   border-radius: 12.5vh;
-  margin: 30px auto;
 }
 
 .about-left {
-  margin-right: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -143,7 +149,6 @@ body {
 }
 
 .other-left {
-  margin-right: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -158,25 +163,13 @@ body {
   text-transform: none;
 }
 
-.projects-left,
-.skills-left,
-.about-left {
-  height: 35vh;
-  width: 30vw;
-}
-
 .projects-right p,
 .skills-right p,
 .about-right p {
   color: #beb9ac;
   margin-top: 20px;
   margin-bottom: 40px;
-}
-
-.projects-right h2,
-.skills-right h2,
-.about-right h2 {
-  margin-bottom: 20px;
+  text-align: justify;
 }
 
 .projects-right h3 {
@@ -198,11 +191,14 @@ body {
 
 .footer-container {
   display: flex;
-  margin-top: 30px;
+  margin-top: 5vh;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 50px 50px;
+  border-radius: 30px;
+  padding: 7vh 5vw;
+  width: 50%;
+  height: 50%;
   background-color: rgba(0, 0, 0, 0.15);
 }
 
