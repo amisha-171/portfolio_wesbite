@@ -12,7 +12,7 @@
 
 /* width */
 ::-webkit-scrollbar {
-  width: 0.3vw;
+  width: 2px;
 }
 
 /* track */
@@ -72,14 +72,13 @@ body {
 
 #nav {
   display: flex;
-  flex-direction: row;
+  position: sticky;
   justify-content: space-between;
-  position: fixed;
   top: 0px;
   left: 0px;
   right: 0px;
   z-index: 100;
-  background: #313456;
+  background: rgba(49, 52, 86, 0.8);
   height: 10vh;
 }
 
@@ -101,7 +100,6 @@ body {
 }
 
 .right-section {
-  margin-right: 20px;
   display: flex;
   align-items: center;
 }
@@ -118,51 +116,72 @@ body {
   color: white;
 }
 
-.sub-page {
-  position: relative;
-  margin-top: 30px;
+#page-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 200px 50px;
+}
+
+.sub-page {
+  /*Adds margin to the top of the viewport*/
+  scroll-margin-block-start: 10vh;
+
+  position: relative;
+  margin-top: 5vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7vh 5vw;
+  width: 70%;
+  height: 50%;
+  border-radius: 30px;
   background-color: rgba(0, 0, 0, 0.15);
+}
+
+@media screen and (max-width: 960px) {
+  .sub-page {
+    /*Adds margin to the top of the viewport*/
+    scroll-margin-block-start: 10vh;
+    position: relative;
+    margin-top: 5vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    padding: 4vh 5vw;
+    width: 70%;
+    height: 50%;
+    border-radius: 30px;
+    background-color: rgba(0, 0, 0, 0.15);
+  }
+
+  h2 {
+    margin: 2vh auto;
+  }
 }
 
 .pic-me {
   height: 25vh;
   border-radius: 12.5vh;
-  margin: 30px auto;
 }
 
 .about-left {
-  margin-right: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-}
-
-.other-left {
-  margin-right: 100px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.about-left {
   text-align: center;
   color: #fff;
 }
 
-.about-left h3 {
-  text-transform: none;
+.about-left h1 {
+  margin-bottom: 3vh;
 }
 
-.projects-left,
-.skills-left,
-.about-left {
-  height: 35vh;
-  width: 30vw;
+.other-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .projects-right p,
@@ -171,12 +190,13 @@ body {
   color: #beb9ac;
   margin-top: 20px;
   margin-bottom: 40px;
+  text-align: justify;
 }
 
-.projects-right h2,
-.skills-right h2,
-.about-right h2 {
-  margin-bottom: 20px;
+.projects-right,
+.skills-right,
+.about-right {
+  margin-left: 4vw;
 }
 
 .projects-right h3 {
@@ -192,17 +212,20 @@ body {
 .projects-right-box {
   display: flex;
   flex-direction: column;
-  height: 35vh;
+  height: 48vh;
   overflow-y: scroll;
 }
 
 .footer-container {
   display: flex;
-  margin-top: 30px;
+  margin: 5vh auto;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 50px 50px;
+  border-radius: 30px;
+  padding: 7vh 5vw;
+  width: 70%;
+  height: 50%;
   background-color: rgba(0, 0, 0, 0.15);
 }
 
