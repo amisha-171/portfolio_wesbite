@@ -60,6 +60,7 @@ const highlightMenu = () => {
 window.addEventListener("scroll", highlightMenu);
 window.addEventListener("resize", highlightMenu);
 window.addEventListener("click", highlightMenu);
+window.addEventListener("load", highlightMenu);
 
 function isInViewport(element) {
   const rect = element.getBoundingClientRect();
