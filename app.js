@@ -1,54 +1,67 @@
 //function to select which button in the nav to highlight.
 const highlightMenu = () => {
   const element = document.querySelector(".highlight");
-  const about = document.querySelector("#about-page");
-  const skills = document.querySelector("#skills-page");
-  const projects = document.querySelector("#projects-page");
-  const contact = document.querySelector("#contact-page");
-  let scrollPos = window.scrollY;
+  const aboutButton = document.querySelector("#about-page");
+  const skillsButton = document.querySelector("#skills-page");
+  const projectsButton = document.querySelector("#projects-page");
+  const contactButton = document.querySelector("#contact-page");
 
-  console.log(scrollPos);
+  const about = document.querySelector("#about");
+  const skills = document.querySelector("#skills");
+  const projects = document.querySelector("#projects");
+  const contact = document.querySelector("#contact");
 
   // now add 'highlight' class to my menu items...
   // checking if it's desktop display for highlights.
 
-  if (window.innerWidth > 960 && scrollPos < 500) {
-    about.classList.add("highlight");
-    skills.classList.remove("highlight");
-    contact.classList.remove("highlight");
-    projects.classList.remove("highlight");
-    document.getElementById("page-title").classList.remove("disappear");
-    return;
-  } else if (window.innerWidth > 960 && scrollPos < 1150) {
-    skills.classList.add("highlight");
-    about.classList.remove("highlight");
-    projects.classList.remove("highlight");
-    contact.classList.remove("highlight");
-    document.getElementById("page-title").classList.remove("disappear");
-    return;
-  } else if (window.innerWidth > 960 && scrollPos < 1550) {
-    projects.classList.add("highlight");
-    skills.classList.remove("highlight");
-    contact.classList.remove("highlight");
-    about.classList.remove("highlight");
-    document.getElementById("page-title").classList.remove("disappear");
-    return;
-  } else if (window.innerWidth > 960 && scrollPos < 2200) {
-    contact.classList.add("highlight");
-    projects.classList.remove("highlight");
-    about.classList.remove("highlight");
-    skills.classList.remove("highlight");
-    document.getElementById("page-title").classList.remove("disappear");
-    return;
-  }
-
-  if (window.innerWidth < 960 && element != null) {
-    //removing highlight if there is actually an element highlighted.
-    element.classList.remove("highlight");
+  if (window.innerWidth < 960) {
+    aboutButton.classList.remove("highlight");
+    skillsButton.classList.remove("highlight");
+    contactButton.classList.remove("highlight");
+    projectsButton.classList.remove("highlight");
     document.getElementById("page-title").classList.add("disappear");
+    return;
+  } else if (isInViewport(about)) {
+    aboutButton.classList.add("highlight");
+    skillsButton.classList.remove("highlight");
+    contactButton.classList.remove("highlight");
+    projectsButton.classList.remove("highlight");
+    document.getElementById("page-title").classList.remove("disappear");
+    return;
+  } else if (isInViewport(skills)) {
+    skillsButton.classList.add("highlight");
+    aboutButton.classList.remove("highlight");
+    projectsButton.classList.remove("highlight");
+    contactButton.classList.remove("highlight");
+    document.getElementById("page-title").classList.remove("disappear");
+    return;
+  } else if (isInViewport(projects)) {
+    projectsButton.classList.add("highlight");
+    skillsButton.classList.remove("highlight");
+    contactButton.classList.remove("highlight");
+    aboutButton.classList.remove("highlight");
+    document.getElementById("page-title").classList.remove("disappear");
+    return;
+  } else if (isInViewport(contact)) {
+    contactButton.classList.add("highlight");
+    projectsButton.classList.remove("highlight");
+    aboutButton.classList.remove("highlight");
+    skillsButton.classList.remove("highlight");
+    document.getElementById("page-title").classList.remove("disappear");
+    return;
   }
 };
-
 window.addEventListener("scroll", highlightMenu);
 window.addEventListener("resize", highlightMenu);
 window.addEventListener("click", highlightMenu);
+
+function isInViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <=
+      (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
