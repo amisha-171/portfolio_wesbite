@@ -15,8 +15,6 @@ const highlightMenu = () => {
   // checking if it's desktop display for highlights.
 
   if (window.innerWidth < 960) {
-    document.getElementById("page-title").classList.add("disappear");
-    document.getElementById("logo").classList.add("disappear");
     aboutButton.classList.remove("highlight");
     skillsButton.classList.remove("highlight");
     contactButton.classList.remove("highlight");
@@ -29,32 +27,24 @@ const highlightMenu = () => {
     skillsButton.classList.remove("highlight");
     contactButton.classList.remove("highlight");
     projectsButton.classList.remove("highlight");
-    document.getElementById("page-title").classList.remove("disappear");
-    document.getElementById("logo").classList.remove("disappear");
     return;
   } else if (isInViewport(skills)) {
     skillsButton.classList.add("highlight");
     aboutButton.classList.remove("highlight");
     projectsButton.classList.remove("highlight");
     contactButton.classList.remove("highlight");
-    document.getElementById("page-title").classList.remove("disappear");
-    document.getElementById("logo").classList.remove("disappear");
     return;
   } else if (isInViewport(projects)) {
     projectsButton.classList.add("highlight");
     skillsButton.classList.remove("highlight");
     contactButton.classList.remove("highlight");
     aboutButton.classList.remove("highlight");
-    document.getElementById("page-title").classList.remove("disappear");
-    document.getElementById("logo").classList.remove("disappear");
     return;
   } else if (isInViewport(contact)) {
     contactButton.classList.add("highlight");
     projectsButton.classList.remove("highlight");
     aboutButton.classList.remove("highlight");
     skillsButton.classList.remove("highlight");
-    document.getElementById("page-title").classList.remove("disappear");
-    document.getElementById("logo").classList.remove("disappear");
     return;
   }
 };
